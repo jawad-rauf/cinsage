@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Recommendation</title>
+</head>
+<body>
+    <h1>Movie Recommendation System</h1>
+    <form action="{% url 'recommend' %}" method="get">
+        <label for="genre">Genre (comma separated for multiple):</label>
+        <input type="text" id="genre" name="genre"><br><br>
+
+        <label for="type_choice">Type (Movies/Shows):</label>
+        <input type="text" id="type_choice" name="type_choice"><br><br>
+
+        <label for="language">Language (English/Urdu):</label>
+        <input type="text" id="language" name="language"><br><br>
+
+        <input type="submit" value="Get Recommendations">
+    </form>
+</body>
+</html>

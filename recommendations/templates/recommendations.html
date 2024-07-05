@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommendations</title>
+</head>
+<body>
+    <h1>Recommendations</h1>
+    <h2>Based on Genre, Type, and Language</h2>
+    {% if recommendations %}
+        <ul>
+        {% for movie in recommendations %}
+            <li>
+                <strong>{{ movie.title }}</strong><br>
+                Genre: {{ movie.genre }}<br>
+                Type: {{ movie.type }}<br>
+                Language: {{ movie.language }}<br>
+                Release Date: {{ movie.release_date }}<br>
+                Description: {{ movie.description }}<br>
+                Cast: {{ movie.cast }}<br>
+                Director: {{ movie.director }}<br>
+            </li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No recommendations found.</p>
+    {% endif %}
+</body>
+</html>
